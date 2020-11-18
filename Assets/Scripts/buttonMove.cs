@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class buttonMove : MonoBehaviour
 {
     public Button thisBtn;
+    public Button thisBtn2;
     // Start is called before the first frame update
     void Start()
     {
         thisBtn.onClick.AddListener(TaskOnClick);
+        thisBtn2.onClick.AddListener(TaskOnClick);
     }
 
     void TaskOnClick()
@@ -17,6 +19,7 @@ public class buttonMove : MonoBehaviour
         //Output this to console when Button1 or Button3 is clicked
         Debug.Log("You have clicked the button!");
         thisBtn.transform.position=  new Vector3(0,-500,0);
+        thisBtn2.transform.position=  new Vector3(0,-500,0);
     }
     // Update is called once per frame
     void Update()
